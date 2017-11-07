@@ -22,9 +22,7 @@ public class DownLoadPic {
 		BufferedReader br = null;
 		Reader reader = null;
 		try {
-			
-			
-			
+			//到底提交了么
 			file = new File("D:/SiteURL.txt");
 			reader = new FileReader(file);
 			br = new BufferedReader(reader);
