@@ -33,6 +33,7 @@ public class TestPa {
 		TestPa test = new TestPa();
 		String regex = "\\/\\/item.*html";
 		String urlStr = "https://list.jd.com/list.html?cat=12218,12221";
+		System.out.println("AAAAA");
 		List<String> list = test.jingdongPaChongShengXian(urlStr, regex);
 		System.out.println(list.size());
 		test.writeToQueue(list);
