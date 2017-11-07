@@ -22,6 +22,9 @@ public class DownLoadPic {
 		BufferedReader br = null;
 		Reader reader = null;
 		try {
+			
+			
+			
 			file = new File("D:/SiteURL.txt");
 			reader = new FileReader(file);
 			br = new BufferedReader(reader);
