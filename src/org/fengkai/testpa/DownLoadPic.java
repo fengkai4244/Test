@@ -46,6 +46,7 @@ public class DownLoadPic {
 			conn.setConnectTimeout(5000);
 			conn.setRequestMethod("GET");
 			//AAAAAA
+			//BBBBB
 			if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
 				InputStream inputStream = conn.getInputStream();
 				return inputStream;
