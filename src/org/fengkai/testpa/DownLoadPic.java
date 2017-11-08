@@ -22,7 +22,7 @@ public class DownLoadPic {
 		BufferedReader br = null;
 		Reader reader = null;
 		try {
-			//到底提交了么
+			// 到底提交了么
 			file = new File("D:/SiteURL.txt");
 			reader = new FileReader(file);
 			br = new BufferedReader(reader);
@@ -45,13 +45,12 @@ public class DownLoadPic {
 			conn.setReadTimeout(5000);
 			conn.setConnectTimeout(5000);
 			conn.setRequestMethod("GET");
-			//AAAAAA
-			//BBBBB
+			// AAAAAA
+			// BBBBB
 			if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
 				InputStream inputStream = conn.getInputStream();
 				return inputStream;
 			}
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -60,13 +59,11 @@ public class DownLoadPic {
 
 	// 将服务器响应的数据流存到本地文件
 	public static void saveData(InputStream is, File file) {
-		try (
-				BufferedInputStream bis = new BufferedInputStream(is);
-				BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
-				) {
+		try (BufferedInputStream bis = new BufferedInputStream(is);
+				BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));) {
 			byte[] buffer = new byte[1024];
 			int len = -1;
-			while ((len = bis.read(buffer)) != -1) {//顺序往下读
+			while ((len = bis.read(buffer)) != -1) {// 顺序往下读
 				bos.write(buffer, 0, len);
 				bos.flush();
 			}
